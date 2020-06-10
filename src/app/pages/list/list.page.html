@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-input placeholder="Enter your Pokemon number" [(ngModel)]="myid"></ion-input>
+  <ion-button routerLink="details" expand="block">Go to details</ion-button>
+  <ion-button [routerLink]="['details', myid]" expand="block">Go to details with ID</ion-button>
+  <ion-button (click)="openDetailsWithQueryParams()" expand="block" color="secondary">Go to details with query params</ion-button>
+  <ion-button (click)="openWithExtras()" expand="block" color="secondary">Go to details with extras</ion-button>
+  <ion-button routerLink="/doesnotexist" expand="block" color="danger">Go to broken page</ion-button>
+  <ion-button (click)="openModal()" expand="block">Open Modal</ion-button>
+</ion-content>

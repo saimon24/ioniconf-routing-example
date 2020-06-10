@@ -1,0 +1,35 @@
+<ion-split-pane contentId="main">
+  <!--  the side menu  -->
+  <ion-menu contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+
+        <ion-menu-toggle autoHide="false">
+        <ion-item button routerLink="/inside/list" routerDirection="root" routerLinkActive="my-active-item">
+          List
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle autoHide="false">
+        <ion-item button routerLink="/inside/profile" routerDirection="root" routerLinkActive="my-active-item">
+          Profile
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle autoHide="false">
+        <ion-item button routerLink="/" routerDirection="root">
+          Back to home
+        </ion-item>
+      </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <!-- the main content -->
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-split-pane>

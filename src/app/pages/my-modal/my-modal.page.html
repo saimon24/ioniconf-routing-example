@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Modal level: {{ level }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">
+        Close
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-nav-link router-direction="forward" [component]="nextPage" [componentProps]="{level: level+1}">
+    <ion-button expand="block">
+      Go deeper
+    </ion-button>
+  </ion-nav-link>
+
+  <ion-nav-link router-direction="root" [component]="nextPage">
+    <ion-button expand="block">
+      Go root
+    </ion-button>
+  </ion-nav-link>
+
+</ion-content>
