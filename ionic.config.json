@@ -1,0 +1,7 @@
+{
+  "name": "conferenceApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
